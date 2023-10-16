@@ -127,10 +127,11 @@ if info_option == "News":
     st.markdown("<h2 class='news-box'>Latest Agricultural News</h2>", unsafe_allow_html=True)
     st.markdown("<iframe src='https://agrinews.in' width='800' height='600'></iframe>", unsafe_allow_html=True)
 # Create a single "Visit" button for both Tomato Variety Recommendation and Fertilizer Recommendation
+# Create direct clickable links for Tomato Variety Recommendation and Fertilizer Recommendation
 if tools_option == "Tomato Variety Recommendation":
     if st.button("Visit Tomato Variety Recommendation"):
-        st.markdown('<meta http-equiv="refresh" content="0;url=https://tomato-variety-site.streamlit.app/">', unsafe_allow_html=True)
+        st.markdown('<a href="https://tomato-variety-site.streamlit.app" target="_blank">Open</a>', unsafe_allow_html=True)
 
 if tools_option == "Fertilizer Recommendation":
     if st.button("Visit Fertilizer Recommendation"):
-        st.markdown('<meta http-equiv="refresh" content="0;url=https://fertilizer-site.streamlit.app/">', unsafe_allow_html=True)
+        st.markdown('<a href="https://fertilizer-site.streamlit.app" target="_blank">Open</a>', unsafe_allow_html=True)
