@@ -129,8 +129,8 @@ if info_option == "News":
 # Handle sub-options for the Tools Section
 if tools_option == "Tomato Variety Recommendation":
     if st.button("Visit Tomato Variety Recommendation"):
-        webbrowser.open_new_tab("https://tomato-variety-site.streamlit.app/")
-
+        st.markdown("Please [Click here](https://tomato-variety-site.streamlit.app/)")
+       
 if tools_option == "Fertilizer Recommendation":
     if st.button("Visit Fertilizer Recommendation"):
-        webbrowser.open_new_tab("https://fertilizer-site.streamlit.app/")
+        st.markdown("Please [Click here](https://fertilizer-site.streamlit.app/)")
