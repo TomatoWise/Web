@@ -131,13 +131,20 @@ if info_option == "Forum":
         # You can handle the form submission here, for example, print the user input
         st.write(f"User Name: {user_name}")
         st.write(f"Information/Doubt: {user_info}")
-        
-# Handle sub-options for the Tools Section
+        # Handle sub-options for the Tools Section
 if tools_option == "Tomato Variety Recommendation":
-    tools_option.empty()  # Clear the main content
+    main_container.empty()  # Clear the main content
     st.markdown("<h2 class='news-box'>Redirecting to Tomato Variety Recommendation...</h2>", unsafe_allow_html=True)
-    st.write("[Open Tomato Variety Recommendation](https://tomato-variety-site.streamlit.app/)")
+    st.markdown(
+        """
+        <a href="https://tomato-variety-site.streamlit.app/" target="_blank">Open Tomato Variety Recommendation</a>
+        """, unsafe_allow_html=True
+    )
 elif tools_option == "Fertilizer Recommendation":
-    tools_option.empty()  # Clear the main content
-    st.markdown("<h2 class 'news-box'>Redirecting to Fertilizer Recommendation...</h2>", unsafe_allow_html=True)
-    st.write("[Open Fertilizer Recommendation](https://fertilizer-site.streamlit.app/)")
+    main_container.empty()  # Clear the main content
+    st.markdown("<h2 class='news-box'>Redirecting to Fertilizer Recommendation...</h2>", unsafe_allow_html=True)
+    st.markdown(
+        """
+        <a href="https://fertilizer-site.streamlit.app/" target="_blank">Open Fertilizer Recommendation</a>
+        """, unsafe_allow_html=True
+    )
