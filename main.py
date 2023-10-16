@@ -126,8 +126,8 @@ if info_option == "News":
 
     st.markdown("<h2 class='news-box'>Latest Agricultural News</h2>", unsafe_allow_html=True)
     st.markdown("<iframe src='https://agrinews.in' width='800' height='600'></iframe>", unsafe_allow_html=True)
-# Create a single "Visit" button for both Tomato Variety Recommendation and Fertilizer Recommendation
-# Create direct clickable links for Tomato Variety Recommendation and Fertilizer Recommendationif tools_option == "Tomato Variety Recommendation":
+# Handle sub-options for the Tools Section
+if tools_option == "Tomato Variety Recommendation":
     if st.button("Visit Tomato Variety Recommendation"):
         st.markdown("Please [Click here](https://tomato-variety-site.streamlit.app/)")
        
