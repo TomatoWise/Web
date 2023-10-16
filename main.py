@@ -133,8 +133,11 @@ if info_option == "Forum":
         st.write(f"Information/Doubt: {user_info}")
         
 # Handle sub-options for the Tools Section
-# Handle sub-options for the Tools Section here.
 if tools_option == "Tomato Variety Recommendation":
-    webbrowser.open_new_tab("https://tomato-variety-site.streamlit.app/")
+    tools_option.empty()  # Clear the main content
+    st.markdown("<h2 class='news-box'>Redirecting to Tomato Variety Recommendation...</h2>", unsafe_allow_html=True)
+    st.write("[Open Tomato Variety Recommendation](https://tomato-variety-site.streamlit.app/)")
 elif tools_option == "Fertilizer Recommendation":
-    webbrowser.open_new_tab("https://fertilizer-site.streamlit.app/")
+    tools_option.empty()  # Clear the main content
+    st.markdown("<h2 class 'news-box'>Redirecting to Fertilizer Recommendation...</h2>", unsafe_allow_html=True)
+    st.write("[Open Fertilizer Recommendation](https://fertilizer-site.streamlit.app/)")
