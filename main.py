@@ -155,10 +155,10 @@ st.markdown(
     <style>
     .shaded-box {
         background-color: #f5f5f5;
+        display: inline-block;
         border: 1px solid #d3d3d3;
         padding: 10px;
         border-radius: 10px;
-        margin: 10px;
     }
     </style>
     """,
