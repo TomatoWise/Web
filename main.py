@@ -80,7 +80,33 @@ except Exception as e:
     st.error("Could not fetch weather data. Please check your location settings or try again later.")
 
 # Handle sub-options for the Information Section here.
+if info_option == "Forum":
+    st.markdown(
+        """
+        <style>
+        .forum-box {
+            border: 1px solid #d3d3d3;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        </style>
+        """
+        , unsafe_allow_html=True
+    )
 
+    st.markdown("<h2 class='forum-box'>Forum: Share Your Information/Doubts</h2>", unsafe_allow_html=True)
+
+    # Create a form for user input
+    with st.form("forum_form"):
+        user_name = st.text_input("Your Name", max_chars=100)
+        user_info = st.text_area("Information/Doubt", max_chars=500)
+        submit_button = st.form_submit_button("Post")
+
+    if submit_button:
+        # You can handle the form submission here, for example, print the user input
+        st.write(f"User Name: {user_name}")
+        st.write(f"Information/Doubt: {user_info}")
 # Handle sub-options for the Market Section here.
 # Display the News page and preview the link
 if info_option == "News":
