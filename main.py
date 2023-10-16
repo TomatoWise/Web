@@ -1,8 +1,6 @@
 import streamlit as st
 import webbrowser
 import requests
-import subprocess
-
 # Set page title and favicon
 st.set_page_config(
     page_title="Tomato Cultivator Dashboard",
@@ -102,49 +100,8 @@ if info_option == "News":
 
     st.markdown("<h2 class='news-box'>Latest Agricultural News</h2>", unsafe_allow_html=True)
     st.markdown("<iframe src='https://agrinews.in' width='800' height='600'></iframe>", unsafe_allow_html=True)
-
-# Handle sub-options for the Forum Section
-if info_option == "Forum":
-    st.markdown(
-        """
-        <style>
-        .forum-box {
-            border: 1px solid #d3d3d3;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-        </style>
-        """
-        , unsafe_allow_html=True
-    )
-
-    st.markdown("<h2 class='forum-box'>Forum: Share Your Information/Doubts</h2>", unsafe_allow_html=True)
-
-    # Create a form for user input
-    with st.form("forum_form"):
-        user_name = st.text_input("Your Name", max_chars=100)
-        user_info = st.text_area("Information/Doubt", max_chars=500)
-        submit_button = st.form_submit_button("Post")
-
-    if submit_button:
-        # You can handle the form submission here, for example, print the user input
-        st.write(f"User Name: {user_name}")
-        st.write(f"Information/Doubt: {user_info}")
-        # Handle sub-options for the Tools Section
+# Handle sub-options for the Tools Section here.
 if tools_option == "Tomato Variety Recommendation":
-    main_container.empty()  # Clear the main content
-    st.markdown("<h2 class='news-box'>Redirecting to Tomato Variety Recommendation...</h2>", unsafe_allow_html=True)
-    st.markdown(
-        """
-        <a href="https://tomato-variety-site.streamlit.app/" target="_blank">Open Tomato Variety Recommendation</a>
-        """, unsafe_allow_html=True
-    )
+    webbrowser.open_new_tab("https://tomato-variety-site.streamlit.app/")
 elif tools_option == "Fertilizer Recommendation":
-    main_container.empty()  # Clear the main content
-    st.markdown("<h2 class='news-box'>Redirecting to Fertilizer Recommendation...</h2>", unsafe_allow_html=True)
-    st.markdown(
-        """
-        <a href="https://fertilizer-site.streamlit.app/" target="_blank">Open Fertilizer Recommendation</a>
-        """, unsafe_allow_html=True
-    )
+    webbrowser.open_new_tab("https://fertilizer-site.streamlit.app/")
