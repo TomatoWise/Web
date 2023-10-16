@@ -132,7 +132,7 @@ if tools_option == "Tomato Variety Recommendation":
         st.markdown(
             """
             <div class="shaded-box">
-                <p>Please <a href="https://tomato-variety-site.streamlit.app/" target="_blank">Click here</a></p>
+                <p><a href="https://tomato-variety-site.streamlit.app/" target="_blank">Click here</a></p>
             </div>
             """,
             unsafe_allow_html=True
@@ -143,7 +143,7 @@ if tools_option == "Fertilizer Recommendation":
         st.markdown(
             """
             <div class="shaded-box">
-                <p>Please <a href="https://fertilizer-site.streamlit.app/" target="_blank">Click here</a></p>
+                <p><a href="https://fertilizer-site.streamlit.app/" target="_blank">Click here</a></p>
             </div>
             """,
             unsafe_allow_html=True
