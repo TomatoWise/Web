@@ -129,11 +129,8 @@ if info_option == "News":
 # Handle sub-options for the Tools Section
 if tools_option == "Tomato Variety Recommendation":
     if st.button("Visit Tomato Variety Recommendation"):
-        st.markdown("You are being redirected to [Tomato Variety Recommendation](https://tomato-variety-site.streamlit.app/)")
-        st.markdown('<a href="https://tomato-variety-site.streamlit.app/" target="_blank">Click here to visit Tomato Variety Recommendation</a>', unsafe_allow_html=True)
+        st.markdown('<meta http-equiv="refresh" content="0;url=https://tomato-variety-site.streamlit.app/">', unsafe_allow_html=True)
 
 if tools_option == "Fertilizer Recommendation":
     if st.button("Visit Fertilizer Recommendation"):
-        st.markdown("You are being redirected to [Fertilizer Recommendation](https://fertilizer-site.streamlit.app/)")
-        st.markdown('<a href="https://fertilizer-site.streamlit.app/" target="_blank">Click here to visit Fertilizer Recommendation</a>', unsafe_allow_html=True)
-
+        st.markdown('<meta http-equiv="refresh" content="0;url=https://fertilizer-site.streamlit.app/">', unsafe_allow_html=True)
