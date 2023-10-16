@@ -133,15 +133,8 @@ if info_option == "Forum":
         st.write(f"Information/Doubt: {user_info}")
         
 # Handle sub-options for the Tools Section
+# Handle sub-options for the Tools Section here.
 if tools_option == "Tomato Variety Recommendation":
-    st.markdown("<h2 class='news-box'>Redirecting to Tomato Variety Recommendation...</h2>", unsafe_allow_html=True)
-    try:
-        subprocess.Popen(["start", "https://tomato-variety-site.streamlit.app/"], shell=True)
-    except Exception as e:
-        st.error("Failed to open the link. Please check your browser settings.")
+    webbrowser.open_new_tab("https://tomato-variety-site.streamlit.app/")
 elif tools_option == "Fertilizer Recommendation":
-    st.markdown("<h2 class='news-box'>Redirecting to Fertilizer Recommendation...</h2>", unsafe_allow_html=True)
-    try:
-        subprocess.Popen(["start", "https://fertilizer-site.streamlit.app/"], shell=True)
-    except Exception as e:
-        st.error("Failed to open the link. Please check your browser settings.")
+    webbrowser.open_new_tab("https://fertilizer-site.streamlit.app/")
