@@ -126,12 +126,41 @@ if info_option == "News":
 
     st.markdown("<h2 class='news-box'>Latest Agricultural News</h2>", unsafe_allow_html=True)
     st.markdown("<iframe src='https://agrinews.in' width='800' height='600'></iframe>", unsafe_allow_html=True)
-# Handle sub-options for the Tools Section here.
+# Handle sub-options for the Tools Section
 if tools_option == "Tomato Variety Recommendation":
     if st.button("Visit Tomato Variety Recommendation"):
-        st.markdown("Please [Click here](https://tomato-variety-site.streamlit.app/)")
+        st.markdown(
+            """
+            <div class="shaded-box">
+                <p>Please <a href="https://tomato-variety-site.streamlit.app/" target="_blank">Click here</a></p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
        
 if tools_option == "Fertilizer Recommendation":
     if st.button("Visit Fertilizer Recommendation"):
-        st.markdown("Please [Click here](https://fertilizer-site.streamlit.app/)")
-        
+        st.markdown(
+            """
+            <div class="shaded-box">
+                <p>Please <a href="https://fertilizer-site.streamlit.app/" target="_blank">Click here</a></p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+# Add custom CSS for the shaded box
+st.markdown(
+    """
+    <style>
+    .shaded-box {
+        background-color: #f5f5f5;
+        border: 1px solid #d3d3d3;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
