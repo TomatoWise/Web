@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>Register a FIDC - TomatoWise</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/icon.png" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="login.html"><span class="fw-bolder text-primary">TomatoWise</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      English
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" href="#">English</a>
+                                      <a class="dropdown-item" href="#">हिंदी</a>
+                                      <a class="dropdown-item" href="#">తెలుగు</a>
+                                      <a class="dropdown-item" href="#">தமிழ்</a>
+                                      <a class="dropdown-item" href="#">मराठी</a>
+                                      <a class="dropdown-item" href="#">ગુજરાતી</a>
+                                      <a class="dropdown-item" href="#">বাংলা</a>
+                                    </div>
+                                  </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <section class="py-5">
+                <div class="container px-5">
+                    <!-- Contact form-->
+                    <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                        <div class="text-white rounded-1 mb-4">
+                            <div id="slideshow-container" style="max-width: 250px; margin: auto;">
+                                <img id="slideshow-image" src="assets/1.png" width="250px" alt="">
+                            </div>
+                        </div>
+                        
+                        <style>
+                            #slideshow-image {
+                                transition: opacity 1s ease-in-out;
+                            }
+                        </style>
+                        
+                        <script>
+                            const images = [
+                                "assets/2.png",
+                                "assets/3.png",
+                                "assets/4.png",
+                                "assets/5.png",
+                                "assets/6.png"
+                            ];
+                        
+                            let index = 0;
+                            const slideshowImage = document.getElementById("slideshow-image");
+                        
+                            function updateImage() {
+                                slideshowImage.style.opacity = 0;
+                                setTimeout(function() {
+                                    slideshowImage.src = images[index];
+                                    index = (index + 1) % images.length;
+                                    slideshowImage.style.opacity = 1;
+                                }, 1500); // Crossfade duration is 1.5 second
+                            }
+                        
+                            setInterval(updateImage, 4000); // Change image every 4 seconds
+                        </script>
+                        
+                            <h1 class="fw-bolder">Register an FIDC</h1>
+                            <p class="lead fw-normal text-muted mb-0">Farmer Identity Card (FIDC) is a card issued to farmers of India to register themselves to the platform.</p>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <form id="contactForm">
+                                    <!-- Name input -->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="name" type="text" placeholder="Enter your name" required pattern="[A-Za-z ]+" title="Only alphabetic characters and spaces are allowed"/>
+                                        <label for="name">Full name</label>
+                                    </div>
+                                    <!-- State input (Alphabetic characters only) -->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="state" type="text" placeholder="Enter your state" required pattern="[A-Za-z ]+" title="Only alphabetic characters and spaces are allowed"/>
+                                        <label for="state">State</label>
+                                    </div>
+                                    <!-- City input (Alphabetic characters only) -->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="city" type="text" placeholder="Enter your city" required pattern="[A-Za-z ]+" title="Only alphabetic characters and spaces are allowed"/>
+                                        <label for="city">City</label>
+                                    </div>
+                                    <!-- District input (Alphabetic characters only) -->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="district" type="text" placeholder="Enter your district" required pattern="[A-Za-z ]+" title="Only alphabetic characters and spaces are allowed"/>
+                                        <label for="district">District</label>
+                                    </div>
+                                    <!-- Pincode input (6-digit numeric) -->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="pincode" type="text" placeholder="Enter your pincode" required pattern="\d{6}" title="Please enter a 6-digit pincode"/>
+                                        <label for="pincode">Pincode</label>
+                                    </div>
+                                    <!-- ... Other form fields ... -->
+                                    <!-- Submit Button -->
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">Already have a FIDC? <a href="login.html">Log-in</a></div></div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+            // Function to generate a random 7-digit number
+            function generateRandomNumber() {
+                return Math.floor(1000000 + Math.random() * 9000000);
+            }
+        
+            // Function to generate a random alphanumeric password
+            function generateRandomPassword(length) {
+                const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                let password = "";
+                for (let i = 0; i < length; i++) {
+                    const randomIndex = Math.floor(Math.random() * charset.length);
+                    password += charset.charAt(randomIndex);
+                }
+                return password;
+            }
+        
+            // Function to handle the form submission
+            document.getElementById("contactForm").addEventListener("submit", function (e) {
+                e.preventDefault(); // Prevent the form from submitting normally
+        
+                // Get the user's full name
+                const fullName = document.getElementById("name").value;
+        
+                // Generate a random 7-digit number
+                const fidcNumber = generateRandomNumber();
+        
+                // Generate a random 8-character alphanumeric password
+                const password = generateRandomPassword(8);
+        
+                // Display a popup message with the generated information
+                alert(`Hello ${fullName}, You are now registered on TomatoWise. Here is your FIDC number: ${fidcNumber}.\nUse this as your login ID along with this password: ${password}`);
+        
+                // Clear the form fields (optional)
+                document.getElementById("name").value = "";
+        
+                // You can add code here to send the FIDC number and password to your server for storage, if needed.
+            });
+        </script>
+        
+    </body>
+</html>
+
