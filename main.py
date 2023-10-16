@@ -1,6 +1,8 @@
 import streamlit as st
 import webbrowser
 import requests
+import subprocess
+
 # Set page title and favicon
 st.set_page_config(
     page_title="Tomato Cultivator Dashboard",
@@ -130,18 +132,16 @@ if info_option == "Forum":
         st.write(f"User Name: {user_name}")
         st.write(f"Information/Doubt: {user_info}")
         
-# Handle sub-options for the Tools Section here.
+# Handle sub-options for the Tools Section
 if tools_option == "Tomato Variety Recommendation":
-    main_container.empty()  # Clear the main content
     st.markdown("<h2 class='news-box'>Redirecting to Tomato Variety Recommendation...</h2>", unsafe_allow_html=True)
-    st.markdown(
-        f'<script>window.open("https://tomato-variety-site.streamlit.app/","_blank");</script>',
-        unsafe_allow_html=True
-    )
+    try:
+        subprocess.Popen(["start", "https://tomato-variety-site.streamlit.app/"], shell=True)
+    except Exception as e:
+        st.error("Failed to open the link. Please check your browser settings.")
 elif tools_option == "Fertilizer Recommendation":
-    main_container.empty()  # Clear the main content
     st.markdown("<h2 class='news-box'>Redirecting to Fertilizer Recommendation...</h2>", unsafe_allow_html=True)
-    st.markdown(
-        f'<script>window.open("https://fertilizer-site.streamlit.app/","_blank");</script>',
-        unsafe_allow_html=True
-    )
+    try:
+        subprocess.Popen(["start", "https://fertilizer-site.streamlit.app/"], shell=True)
+    except Exception as e:
+        st.error("Failed to open the link. Please check your browser settings.")
