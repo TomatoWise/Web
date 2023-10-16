@@ -128,8 +128,9 @@ if info_option == "News":
     st.markdown("<iframe src='https://agrinews.in' width='800' height='600'></iframe>", unsafe_allow_html=True)
 # Handle sub-options for the Tools Section
 if tools_option == "Tomato Variety Recommendation":
-        st.markdown('<a href="https://tomato-variety-site.streamlit.app/" target="_blank">Click here to visit Tomato Variety Recommendation</a>', unsafe_allow_html=True)
+    if st.button("Visit Tomato Variety Recommendation"):
+        webbrowser.open_new_tab("https://tomato-variety-site.streamlit.app/")
 
 if tools_option == "Fertilizer Recommendation":
-        st.markdown('<a href="https://fertilizer-site.streamlit.app/" target="_blank">Click here to visit Fertilizer Recommendation</a>', unsafe_allow_html=True)
-
+    if st.button("Visit Fertilizer Recommendation"):
+        webbrowser.open_new_tab("https://fertilizer-site.streamlit.app/")
